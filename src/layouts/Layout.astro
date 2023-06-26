@@ -15,8 +15,20 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.css" />
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.js"></script>
+		<script type="text/javascript">
+		algoliasearchNetlify({
+			appId: 'VTKT4DH07C',
+			apiKey: '88641801e8cbe1c0ea2538901d29cc20',
+			siteId: 'd98f7573-7b9a-4dd6-b272-d5e4478f1109',
+			branch: 'master',
+			selector: 'div#search',
+		});
+		</script>
 	</head>
 	<body>
+		<div id="search"></div>
 		<slot />
 	</body>
 </html>
