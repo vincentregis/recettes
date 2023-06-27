@@ -1,0 +1,49 @@
+---
+export interface Props {
+	title: string;
+}
+
+const { title , frontmatter } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description">
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="sitemap" href="/sitemap-0.xml" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{frontmatter.title}</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.css" />
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.js"></script>
+		<script type="text/javascript">
+		algoliasearchNetlify({
+			appId: 'VTKT4DH07C',
+			apiKey: '88641801e8cbe1c0ea2538901d29cc20',
+			siteId: 'd98f7573-7b9a-4dd6-b272-d5e4478f1109',
+			branch: 'master',
+			selector: 'div#search',
+		});
+		</script>
+	</head>
+	<body>
+		<div id="search"></div>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root {
+		--accent: 124, 58, 237;
+		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		background-color: #F6F6F6;
+	}
+	code {
+		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+			Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+</style>

@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/Layout.astro
+layout: ../../layouts/LayoutRecette.astro
 title: 'Pennes au Pesto et Bacon'
 category: 'Plats Principaux'
 tags: 'pâtes, bacon'

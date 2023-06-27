@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/Layout.astro
+layout: ../../layouts/LayoutRecette.astro
 title: 'Paté chinois Texan'
 category: 'viande'
 tags: 'hiver, boeuf haché'
