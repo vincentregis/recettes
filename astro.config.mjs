@@ -1,4 +1,9 @@
 import { defineConfig } from 'astro/config';
 
+import sitemap from "@astrojs/sitemap";
+
 // https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  site: 'https://mellifluous-kringle-4809b2.netlify.app/',
+  integrations: [sitemap()]
+});
